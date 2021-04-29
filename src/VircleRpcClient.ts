@@ -3,7 +3,7 @@ import { JsonRpcCall, RpcConfigOptions } from "./index";
 import { JsonRpcRequest } from "./model/request/jsonRpcRequest";
 import { HelpServices } from "./services/HelpServices";
 
-export class SyscoinRpcClient {
+export class VircleRpcClient {
 
   private readonly instance: AxiosInstance;
   private readonly url: string;
@@ -13,7 +13,7 @@ export class SyscoinRpcClient {
 
   constructor(private configOptions: RpcConfigOptions) {
 
-    this.instance = axios.create(SyscoinRpcClient.createConfigurationObject(
+    this.instance = axios.create(VircleRpcClient.createConfigurationObject(
       this.configOptions.username,
       this.configOptions.password,
       this.configOptions.useSsl,

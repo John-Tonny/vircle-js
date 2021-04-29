@@ -1,7 +1,7 @@
 {
-  "name": "@syscoin/syscoin-js",
+  "name": "@vircle/vircle-js",
   "version": "4.1.2",
-  "description": "Javascript SDK for the Syscoin cryptocurrency.",
+  "description": "Javascript SDK for the Vircle cryptocurrency.",
   "main": "dist/",
   "typings": "dist/",
   "scripts": {
@@ -12,18 +12,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/syscoin/syscoin-js.git"
+    "url": "git+https://github.com/vircle/vircle-js.git"
   },
   "keywords": [
-    "syscoin",
+    "vircle",
     "javascript"
   ],
   "author": "Blockchain Foundry",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/syscoin/syscoin-js/issues"
+    "url": "https://github.com/vircle/vircle-js/issues"
   },
-  "homepage": "https://github.com/syscoin/syscoin-js#readme",
+  "homepage": "https://github.com/vircle/vircle-js#readme",
   "dependencies": {
     "@types/node": "^12.0.1",
     "axios": ">=0.18.1",

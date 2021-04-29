@@ -1,14 +1,14 @@
-export interface SysTxAssetUpdate {
+export interface VclTxAssetActivate {
     txtype: string;
     asset_guid: number;
     symbol: string;
     txid: string;
     height: number;
-    public_value?: string;
     sender: string;
-    update_flags?: number;
-    balance?: number;
-    contract?: string;
+    update_flags: number;
+    balance: number;
+    total_supply: number;
+    max_supply: number;
     precision: number;
     blockhash: string;
 }

@@ -1,4 +1,4 @@
-export * from "./SyscoinRpcClient";
+export * from "./VircleRpcClient";
 export * from "./rpcServices";
 export * from "./RPCServiceFunctions";
 export * from "./model/index";

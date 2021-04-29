@@ -1,5 +1,5 @@
 import { TransactionDetailEntry } from './transactionDetailEntry';
-import { SysTx } from "./sysTx";
+import { VclTx } from "./vclTx";
 
 export interface Transaction { 
     amount?: string;

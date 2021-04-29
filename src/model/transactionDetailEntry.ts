@@ -1,4 +1,4 @@
-import { SysTx } from "./sysTx";
+import { VclTx } from "./vclTx";
 
 export interface TransactionDetailEntry {
     address?: string;
@@ -6,6 +6,6 @@ export interface TransactionDetailEntry {
     amount?: number;
     label?: string;
     vout?: number;
-    systx?: SysTx; //add other types
+    vcltx?: VclTx; //add other types
     fee?: number;
 }

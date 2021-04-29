@@ -1,4 +1,4 @@
-export interface SysTxAssetUpdate {
+export interface VclTxAssetUpdate {
   txtype: string;
   asset_guid: number;
   symbol: string;

@@ -1,11 +1,11 @@
 import { createClient } from '../utilities';
 import config from "../config";
-import { SyscoinRpcClient } from "../../src/SyscoinRpcClient";
+import { VircleRpcClient } from "../../src/VircleRpcClient";
 
 const configOptions = config;
 
-describe('Syscoin RPC Client Tests', () => {
-  let client: SyscoinRpcClient;
+describe('Vircle RPC Client Tests', () => {
+  let client: VircleRpcClient;
 
   beforeAll(async () => {
     console.log("cl");

@@ -1,4 +1,4 @@
-export interface SyscoinAddressEntry {
+export interface VircleAddressEntry {
     address?: string;
     amount?: number;
     label?: string;

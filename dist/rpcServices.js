@@ -392,7 +392,7 @@ function rpcServices(callRpc) {
             }
             return callThroughToRpc(arguments);
         },
-        // == Syscoin ==
+        // == Vircle ==
         addressBalance: function () {
             var args = [];
             for (var _i = 0; _i < arguments.length; _i++) {
@@ -618,7 +618,7 @@ function rpcServices(callRpc) {
             }
             return callThroughToRpc(arguments);
         },
-        syscoinDecodeRawTransaction: function () {
+        vircleDecodeRawTransaction: function () {
             var args = [];
             for (var _i = 0; _i < arguments.length; _i++) {
                 args[_i] = arguments[_i];
@@ -1081,7 +1081,7 @@ function rpcServices(callRpc) {
             // console.log("caught error: ", e.response.data);
             if (e.response && e.response.data) {
                 if (e.response.data.result !== undefined && e.response.data.error !== undefined) {
-                    //this is a special syscoin error, return the nested error
+                    //this is a special vircle error, return the nested error
                     return unwrapRpcResponse(e.response.data);
                 }
             }

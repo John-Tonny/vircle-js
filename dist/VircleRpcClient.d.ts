@@ -1,7 +1,7 @@
 import { JsonRpcCall, RpcConfigOptions } from "./index";
 import { JsonRpcRequest } from "./model/request/jsonRpcRequest";
 import { HelpServices } from "./services/HelpServices";
-export declare class SyscoinRpcClient {
+export declare class VircleRpcClient {
     private configOptions;
     private readonly instance;
     private readonly url;

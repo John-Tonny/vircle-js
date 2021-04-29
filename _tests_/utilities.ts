@@ -1,7 +1,7 @@
-import { SyscoinRpcClient } from "../src/SyscoinRpcClient";
+import { VircleRpcClient } from "../src/VircleRpcClient";
 
 async function createClient(rpcConfigOptions) {
-    let client = new SyscoinRpcClient(rpcConfigOptions);
+    let client = new VircleRpcClient(rpcConfigOptions);
     return client;
 }
 

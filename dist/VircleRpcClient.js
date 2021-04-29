@@ -47,11 +47,11 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var axios_1 = require("axios");
 var HelpServices_1 = require("./services/HelpServices");
-var SyscoinRpcClient = /** @class */ (function () {
-    function SyscoinRpcClient(configOptions) {
+var VircleRpcClient = /** @class */ (function () {
+    function VircleRpcClient(configOptions) {
         this.configOptions = configOptions;
         this.logging = false;
-        this.instance = axios_1.default.create(SyscoinRpcClient.createConfigurationObject(this.configOptions.username, this.configOptions.password, this.configOptions.useSsl, this.configOptions.timeout, this.configOptions.customHttpAgent));
+        this.instance = axios_1.default.create(VircleRpcClient.createConfigurationObject(this.configOptions.username, this.configOptions.password, this.configOptions.useSsl, this.configOptions.timeout, this.configOptions.customHttpAgent));
         this.url = (this.configOptions.useSsl ? "https" : "http") + "://" + this.configOptions.host + ":" + this.configOptions.rpcPort;
         this.callRpc = this.callRpc.bind(this);
         this.batch = this.batch.bind(this);
@@ -61,10 +61,10 @@ var SyscoinRpcClient = /** @class */ (function () {
             this.logging = true;
         }
     }
-    SyscoinRpcClient.prototype.getStandardResponseFromRpcResponse = function (response) {
+    VircleRpcClient.prototype.getStandardResponseFromRpcResponse = function (response) {
         return response.result ? response.result : response;
     };
-    SyscoinRpcClient.prototype.getRequestObject = function (methodName, args) {
+    VircleRpcClient.prototype.getRequestObject = function (methodName, args) {
         var instance = this.instance;
         var url = this.url;
         var getStandardResponseFromRpcResponse = this.getStandardResponseFromRpcResponse;
@@ -117,7 +117,7 @@ var SyscoinRpcClient = /** @class */ (function () {
             }
         };
     };
-    SyscoinRpcClient.createConfigurationObject = function (username, password, useSsl, timeout, customHttpAgent) {
+    VircleRpcClient.createConfigurationObject = function (username, password, useSsl, timeout, customHttpAgent) {
         var configurationObject = {
             auth: {
                 username: username,
@@ -131,10 +131,10 @@ var SyscoinRpcClient = /** @class */ (function () {
         }
         return configurationObject;
     };
-    SyscoinRpcClient.prototype.callRpc = function (methodName, args) {
+    VircleRpcClient.prototype.callRpc = function (methodName, args) {
         return this.getRequestObject(methodName, args);
     };
-    SyscoinRpcClient.prototype.batch = function (requests, unwrapResponses) {
+    VircleRpcClient.prototype.batch = function (requests, unwrapResponses) {
         if (unwrapResponses === void 0) { unwrapResponses = true; }
         return __awaiter(this, void 0, void 0, function () {
             var responseFromRpc, dataFromRPC, _i, _a, result;
@@ -156,6 +156,6 @@ var SyscoinRpcClient = /** @class */ (function () {
             });
         });
     };
-    return SyscoinRpcClient;
+    return VircleRpcClient;
 }());
-exports.SyscoinRpcClient = SyscoinRpcClient;
+exports.VircleRpcClient = VircleRpcClient;

@@ -88,7 +88,7 @@ export function rpcServices(callRpc): RPCServiceFunctions {
     testMempoolAccept(...args) { return callThroughToRpc(arguments) },
     utxoUpdatePsbt(...args) { return callThroughToRpc(arguments) },
 
-    // == Syscoin ==
+    // == Vircle ==
     addressBalance(...args) { return callThroughToRpc(arguments) },
     assetAllocationBalance(...args) { return callThroughToRpc(arguments) },
     assetAllocationBurn(...args) { return callThroughToRpc(arguments) },
@@ -122,7 +122,7 @@ export function rpcServices(callRpc): RPCServiceFunctions {
     sentinelPing(...args) { return callThroughToRpc(arguments) },
     spork(...args) { return callThroughToRpc(arguments) },
     syscoinBurn(...args) { return callThroughToRpc(arguments) },
-    syscoinDecodeRawTransaction(...args) { return callThroughToRpc(arguments) },
+    vircleDecodeRawTransaction(...args) { return callThroughToRpc(arguments) },
     syscoinGetSpvProof(...args) { return callThroughToRpc(arguments) },
     syscoinMint(...args) { return callThroughToRpc(arguments) },
     syscoinSetEthHeaders(...args) { return callThroughToRpc(arguments) },
@@ -217,7 +217,7 @@ export function rpcServices(callRpc): RPCServiceFunctions {
       // console.log("caught error: ", e.response.data);
       if (e.response && e.response.data) {
         if (e.response.data.result !== undefined && e.response.data.error !== undefined) {
-          //this is a special syscoin error, return the nested error
+          //this is a special vircle error, return the nested error
           return unwrapRpcResponse(e.response.data);
         }
       }

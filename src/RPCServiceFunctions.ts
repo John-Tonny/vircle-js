@@ -11,7 +11,7 @@ import {
   PbstPayloadInfo,
   RawTx,
   RpcResponse,
-  SyscoinAddressEntry,
+  VircleAddressEntry,
   TpsRawTx,
   Transaction,
   TransactionData,
@@ -106,7 +106,7 @@ export interface RPCServiceFunctions {
     testMempoolAccept(rawTxs: Array<string>, maxFeeRate?: number): JsonRpcCall<any>;
     utxoUpdatePsbt(pbst: string): JsonRpcCall<any>;
 
-    // == Syscoin ==
+    // == Vircle ==
     addressBalance(address: string): JsonRpcCall<any>;
     assetAllocationBalance(assetGuid: number, address: string): JsonRpcCall<any>;
     assetAllocationBurn(assetGuid: number, address: string, amount: number, ethAddress: string): JsonRpcCall<any>;
@@ -140,7 +140,7 @@ export interface RPCServiceFunctions {
     sentinelPing(version: number): JsonRpcCall<any>;
     spork(command: string): JsonRpcCall<any>;
     syscoinBurn(fundingAddress: string, amount: number, ethAddress: string): JsonRpcCall<any>;
-    syscoinDecodeRawTransaction(hexString: number): JsonRpcCall<any>;
+    vircleDecodeRawTransaction(hexString: number): JsonRpcCall<any>;
     syscoinGetSpvProof(txid: string, blockHash?: string): JsonRpcCall<any>;
     syscoinMint(address: string, amount: number, blockNum: number, txHex: string, txRootHex: string, txMerkleProofHex: string, witness?: string): JsonRpcCall<any>;
     syscoinSetEthHeaders(headers: EthHeaders): JsonRpcCall<any>;
@@ -192,7 +192,7 @@ export interface RPCServiceFunctions {
     listAddressGroupings(): JsonRpcCall<any>;
     listLabels(purpose?: string): JsonRpcCall<any>;
     listLockUnspent(): JsonRpcCall<any>;
-    listReceivedByAddress(minConf?: number, includeEmpty?: boolean, includeWatchOnly?: boolean, addressFilter?: string): JsonRpcCall<SyscoinAddressEntry[]>;
+    listReceivedByAddress(minConf?: number, includeEmpty?: boolean, includeWatchOnly?: boolean, addressFilter?: string): JsonRpcCall<VircleAddressEntry[]>;
     listReceivedByLabel(minConf?: number, includeEmpty?: boolean, includeWatchOnly?: boolean): JsonRpcCall<any>;
     listSinceBlock(blockHash?: string, targetConfs?: number, includeWatchOnly?: number, includeRemoved?: number): JsonRpcCall<any>;
     listTransactions(label?: string, count?: number, skip?: number, includeWatchOnly?: number): JsonRpcCall<Array<TransactionListEntry>>;

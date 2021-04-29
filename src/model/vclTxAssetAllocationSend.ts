@@ -1,6 +1,6 @@
 import { AssetAllocationAmount } from "./assetAllocationAmount";
 
-export interface SysTxAssetAllocationSend {
+export interface VclTxAssetAllocationSend {
   txtype: string;
   asset_allocation: string;
   asset_guid: number;

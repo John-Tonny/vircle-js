@@ -1,4 +1,4 @@
-import { SysTx } from "./sysTx";
+import { VclTx } from "./vclTx";
 export interface TransactionListEntry {
     address?: string;
     category?: string;
@@ -15,5 +15,5 @@ export interface TransactionListEntry {
     timereceived?: number;
     "bip125-replaceable"?: string;
     abandoned?: boolean;
-    systx?: SysTx;
+    vcltx?: VclTx;
 }
